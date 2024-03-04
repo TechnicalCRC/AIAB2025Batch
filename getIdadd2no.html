@@ -1,0 +1,30 @@
+<!-- getElementById Example - Add 2 numbers on botton click-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>getElementById - Add 2 num</title>
+</head>
+
+<body>
+  <h1>getElementById</h1>
+  <input type="text" id="txt1">
+  <input type="text" id="txt2">
+  <button onclick="add()">Add</button>
+  <p id="result">Result Here: </p>
+
+  <script>
+    function add() {
+      let a = document.getElementById('txt1').value;
+      let b = document.getElementById('txt2').value;
+      //      alert(Number(a)+Number(b));
+
+      let c = Number(a) + Number(b);
+
+      document.getElementById('result').innerText = "Result Here: " + c;
+
+    }
+  </script>
+</body>
+
+</html>
