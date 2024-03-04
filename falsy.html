@@ -1,13 +1,25 @@
+<!-- falsy values, if-alternatives -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Document</title>
+  <title>falsy if-alternatives</title>
 </head>
 
 <body>
   <script>
-    let age = 'd';
+
+    // falsy values
+    // null, undefined, 0, false, NaN, "" 
+    //    let age; // let age = undefined; // undefined 
+    //    let age = null;                  // null  
+    //    let age = 0;                     // 0 
+    //    let age = false;                 // false 
+    //    let age = NaN; // let age=4/'h'; // let age='h'/4; // NaN  
+    //    let age = ""; //let age='';      // "" ''                   
+
+    let age = 10;
 
     if (age) {
       console.log("your age is ok");
@@ -16,18 +28,21 @@
       console.log('you are alien');
     }
 
-    //ternary
+    //    if-alternatives
+    //ternary operator
     console.log(2 > 4 ? 4 : 6);
-    //gaurd
 
-    let a=0;
+    //gaurd operator
+    // null, undefined, 0, false, NaN, "" - replace these false values
+    let a = 0;
     let final_a = a || 18;
     console.log(a);
     console.log(final_a);
-  
-    //default 
 
-  let b;
+    //default operator
+    // null, undefined - replace only these false values
+
+    let b = null;
     let final_b = b ?? 18;
     console.log(b);
     console.log(final_b);
