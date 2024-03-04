@@ -1,0 +1,26 @@
+<!-- getElementByClassName Example - get data by button click-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>getElementByClassName Example - get data by button click</title>
+</head>
+<body>
+ <button onclick="display()">Click</button>
+ <p class="p1"> Para 1 Data</p>  
+ <p class="p2"> Para 2 Data</p>
+ <h2 class="p2">heading data</h2>  
+ <p class="p1"> Para 3 Data</p>
+ <script>
+  function display()
+  {
+    let data = document.getElementsByClassName('p2');
+   
+    // getElementsByClassName, getElementsByName, 
+    // getElementsByTagName return data in array-collection.
+    // so length be use to access size of array-collection
+    for(let i=0;i<data.length;i++)
+    console.log(data[i].innerText);
+  }
+ </script>  
+</body>
+</html>
