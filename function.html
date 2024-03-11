@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Function</title>
+</head>
+
+<body>
+  <script>
+
+    // function hoisting
+    multi(20,5);//60
+    function multi(num, num1=1) {
+      document.write("<br>" + num * num1);
+    }
+
+    multi(3, 5);
+    multi(10, 2);
+
+    function square(num) {
+      return num * num;
+    }
+
+    document.write(`<br>` + square(5));
+    document.write(`<br>` + square(10));
+  </script>
+</body>
+
+</html>
