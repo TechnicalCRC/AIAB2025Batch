@@ -6,14 +6,14 @@
 </head>
 <body>
  <button onclick="display()">Click</button>
- <p class="p1"> Para 1 Data</p>  
- <p class="p2"> Para 2 Data</p>
- <h2 class="p2">heading data</h2>  
- <p class="p1"> Para 3 Data</p>
+ <p class="p1" id="pr1" name="n1"> Para 1 Data</p>  
+ <p class="p2" id="pr2" name="n1"> Para 2 Data</p>
+ <h2 class="p2" id="pr3" name="n3">heading data</h2>  
+ <p class="p1" id="pr4" name="n3"> Para 3 Data</p>
  <script>
   function display()
   {
-    let data = document.getElementsByClassName('p2');
+    let data = document.getElementsByName('n1');
    
     // getElementsByClassName, getElementsByName, 
     // getElementsByTagName return data in array-collection.
