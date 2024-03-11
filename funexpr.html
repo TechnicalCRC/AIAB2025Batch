@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function expression</title>
+</head>
+
+<body>
+
+  <button onclick="sum(1,2,3,4,5)">Sum of array</button>
+  <script>
+
+    function sum(a,b,c,...arr) 
+    // ... rest parameter rest operator
+     {
+      let s = 0;
+      for (let i = 0; i < arr.length; i++)
+        s += arr[i];
+      s = s+a+b+c;
+      console.log("sum = " + s);
+    }
+
+    //square(2) ;// hoisting cannot apply to fun expression
+    //function expression
+    const square = function (n) {
+      return n * n;
+    }
+    console.log(square(4));
+    console.log(square(8));
+
+  </script>
+
+</body>
+
+</html>
