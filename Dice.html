@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dice Game</title>
+</head>
+<body>
+  <button id="btn1" onclick="dice()">Roll Dice to Play</button>
+   <br>
+  <img src="pic/dice1.gif" width="100px" onclick="dice1()">
+  <p id="p1"></p>
+  <img src="pic/dice1.gif" 
+  width="120px" onclick="dice2()" id="img1">
+<script>
+    function dice2(){
+      let val = Math.floor(Math.random()*6+1);
+   // img1.src = `pic/${val}.png`;
+//  img1.setAttribute('src',`pic/${val}.png`);
+  let img = document.getElementById('img1');
+  img.setAttribute('src',`pic/${val}.png`);
+  }
+    function dice1(){
+      let val = Math.floor(Math.random()*6+1);
+    p1.innerText = val; 
+    }
+    function dice(){
+      let val = Math.floor(Math.random()*6+1);
+    btn1.innerText = val; 
+    }
+  </script>
+  
+</body>
+</html>
