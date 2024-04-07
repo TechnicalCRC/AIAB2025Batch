@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create Element Even Odd</title>
+</head>
+<body>
+  Enter any Number 
+<input type="text" id="txt1">
+  <button onclick="addEle()">Add Number</button>
+
+  <!-- Even Div Container -->
+  <div id="evenDiv" style="background-color: aqua;">
+    <p>Even's</p>
+  </div>
+
+  <!-- Odd Div Container -->
+  <div id="oddDiv" style="background-color: bisque;">
+    <p>Odd's</p>
+  </div>
+  <script>
+    function addEle(){
+let ele=document.createElement('p');
+ele.innerText = txt1.value;
+
+if(txt1.value%2 == 0) // checking for even or odd
+  document.querySelector('#evenDiv').appendChild(ele);
+else
+  document.querySelector('#oddDiv').appendChild(ele);
+}
+
+  </script>
+</body>
+</html>
