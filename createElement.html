@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Create Element Work</title>
+</head>
+<body>
+ Enter Data <input type="text" id="txt1">
+  <button onclick="addEle()">Add Element</button>
+  
+  <!-- Parent DOM Container -->
+  <div id="tdiv"></div>
+  <script>
+    function addEle(){
+      // Create Element
+let ele=document.createElement('p');
+
+// Assign Value
+ele.innerText = txt1.value;
+
+// Add to Parent Container
+document.querySelector('#tdiv').appendChild(ele);
+    }
+  </script>
+</body>
+</html>
