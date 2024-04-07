@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Todo App</title>
+  <style>
+    b {
+      border: 1px double blue;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 align="center">Todo App</h2>
+  <hr>
+  Enter Todo <input type="text" id="todo_text" placeholder="Enter Todo task Here"><br>
+  Choose Date <input type="date" id="todo_date">
+  <button onclick="addTodo()">Add Todo</button>
+  <hr>
+  <!--  main DOM Parent -->
+  <div id="todo_container"></div>
+
+  <script>
+    let counter = 0;
+    function addTodo() {
+
+      // Dynamic Parent -- p
+      let parent = document.createElement('p');//<p></p>
+
+      let TodoText = document.createElement('b');//<b></b>
+      let TodoDate = document.createElement('b')
+      let TodoDelBtn = document.createElement('button');
+      // <button></button>
+
+      // Add Content from UI to Dynamic Todo
+      TodoText.innerHTML = document.querySelector('#todo_text').value;
+      TodoDate.innerHTML = document.querySelector('#todo_date').value
+      TodoDelBtn.innerHTML = 'Delete';
+
+      // create dynamic id for parent todo container
+      let parent_id = 'p' + (++counter);
+
+      // call remove() in delete button with parent id
+      TodoDelBtn.setAttribute('onclick', `removeTodo('${parent_id}')`);
+
+      // add childs to parent container
+      parent.appendChild(TodoText);
+      parent.appendChild(TodoDate);
+      parent.appendChild(TodoDelBtn);
+
+      //set id and style attribute of parent
+      parent.setAttribute('id', parent_id);
+      parent.setAttribute('style', 'border:1px solid Black;');
+
+      // add parent to DOM main container
+      document.querySelector('#todo_container').appendChild(parent);
+    }
+    // function call by delete button
+    function removeTodo(id) {
+      // for testing
+      //      alert("button is working....." + id)
+
+      // remove particular todo parent via id
+      //      id.remove();
+ 
+      //todo_container.removeChild(todo_container.children[id]);
+ 
+      todo_container.removeChild(document.querySelector('#' + id));
+
+    }
+  </script>
+</body>
+
+</html>
