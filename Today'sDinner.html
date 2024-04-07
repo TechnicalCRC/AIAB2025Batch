@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Today's Dinner Prediction</title>
+</head>
+<body>
+  <h1>Today's Dinner Prediction Game</h1>
+  <button onclick="predictDinner()" style="font-size: 30px;">Predict Today's Dinner</button>
+  <h2 id="dinner"></h2>
+  <script>
+   let menu = ['Chole-Bhature','Pani-Puri','Malai-Kofta','Kadhi-Chawal','Rajma-Chawal','Kadhai-Panner',"Matar-Panner",'Paw-Bhaji','Sabji-Puri','Aloo-Paratha',
+  'Pizza'];
+
+    function predictDinner(){
+      let val = Math.floor(Math.random()*menu.length);
+     // alert(menu[val]);
+
+//     document.getElementById('dinner').innerText = menu[val];
+
+//document.querySelector('#dinner').innerText = menu[val];
+  
+dinner.innerText = menu[val];
+}
+   
+
+  </script>
+  
+</body>
+</html>
